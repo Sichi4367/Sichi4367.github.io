@@ -6,17 +6,7 @@ var candy = ['GS25', 'CU'];
 function setup() {
     createCanvas(400, 400);
     background(220);
-    stroke(0, 0, 0, 255);
-    strokeWeight(7);
-    line(100, 100, 200, 200);
-    line(200, 200, 300, 400);
-    line(350, 350, 0, 200);
-    line(400, 0, 150, 300);
-    line(128, 45, 200, 200);
-    line(290,255,362,370);
-    stroke(255, 0, 0, 255);
-    fill(255,0,0);
-    rect(50, 220, 10, 10);
+    line1();
 
    
     var input = createInput('상품 이름을 입력하세요');
@@ -27,6 +17,7 @@ function setup() {
 function draw() {
     //background(220);
 }
+
 
 function handleInput() {
     if (this.value() === '초콜릿') {
@@ -44,17 +35,8 @@ function handleInput() {
         point(350,275);
         point(255,150);
         point(100,100);
-        stroke(0, 0, 0, 255);
-    strokeWeight(7);
-    line(100, 100, 200, 200);
-    line(200, 200, 300, 400);
-    line(350, 350, 0, 200);
-    line(400, 0, 150, 300);
-    line(128, 45, 200, 200);
-    line(290,255,362,370);
-    stroke(255, 0, 0, 255);
-    fill(255,0,0);
-    rect(50, 220, 10, 10);
+        
+        line1();
     } else if (this.value() === '사탕') {
         textSize(18);
         noStroke(0);
@@ -70,20 +52,14 @@ function handleInput() {
         point(200,300);
         point(150,20);
         point(390,390);
-        stroke(255, 0, 0, 255);
-    strokeWeight(7);
-    line(100, 100, 200, 200);
-    line(200, 200, 300, 400);
-    line(350, 350, 0, 200);
-    line(400, 0, 150, 300);
-    line(128, 45, 200, 200);
-    line(290,255,362,370);
-    stroke(255, 0, 0, 255);
-    fill(255,0,0);
-    rect(50, 220, 10, 10);
+        line1();
     } else {
         background(220);
-        stroke(0, 0, 0, 255);
+        line1();
+    }
+}
+function line1() {
+    stroke(0, 0, 0, 255);
     strokeWeight(7);
     line(100, 100, 200, 200);
     line(200, 200, 300, 400);
@@ -94,5 +70,5 @@ function handleInput() {
     stroke(255, 0, 0, 255);
     fill(255,0,0);
     rect(50, 220, 10, 10);
-    }
+
 }
